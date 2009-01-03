@@ -19,7 +19,7 @@ var sketchrockwell = { src: '/sifr/sketchrockwell-bold.swf' };
 // One setting you probably want to use is `sIFR.useStyleCheck`. Before you do that,
 // read <http://wiki.novemberborn.net/sifr3/DetectingCSSLoad>.
 
-// sIFR.useStyleCheck = true;
+sIFR.useStyleCheck = true;
 
 // Next, activate sIFR:
 sIFR.activate(sketchrockwell);
@@ -51,6 +51,6 @@ sIFR.activate(sketchrockwell);
 // of the entire Flash movie to be a light grey, and the `color` of the text to
 // be red. Read more about styling at <http://wiki.novemberborn.net/sifr3/Styling>.
 sIFR.replace(sketchrockwell, {
-  selector: 'heading',
+  selector: 'heading-name',
   css: '.sIFR-root { background-color: #95653F; color: #DADEDD; }'
 });
