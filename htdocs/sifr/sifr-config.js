@@ -20,7 +20,6 @@ var sketchrockwell = { src: '/sifr/sketchrockwell-bold.swf' };
 // read <http://wiki.novemberborn.net/sifr3/DetectingCSSLoad>.
 
 sIFR.useStyleCheck = true;
-sIFR.forceClear = true;
 
 // Next, activate sIFR:
 sIFR.activate(sketchrockwell);
