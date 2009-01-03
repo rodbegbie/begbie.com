@@ -20,6 +20,7 @@ var sketchrockwell = { src: '/sifr/sketchrockwell-bold.swf' };
 // read <http://wiki.novemberborn.net/sifr3/DetectingCSSLoad>.
 
 sIFR.useStyleCheck = true;
+sIFR.forceClear = true;
 
 // Next, activate sIFR:
 sIFR.activate(sketchrockwell);
@@ -50,7 +51,9 @@ sIFR.activate(sketchrockwell);
 // is styled via the `.sIFR-root` class. Here we've specified `background-color`
 // of the entire Flash movie to be a light grey, and the `color` of the text to
 // be red. Read more about styling at <http://wiki.novemberborn.net/sifr3/Styling>.
+
 sIFR.replace(sketchrockwell, {
-  selector: 'heading-name',
-  css: '.sIFR-root { background-color: #95653F; color: #DADEDD; }'
+  selector: '.heading-name',
+  css: '.sIFR-root { background-color: #95653F; color: #DADEDD; }',
+  transparent: true,
 });
