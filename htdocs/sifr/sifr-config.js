@@ -51,6 +51,6 @@ sIFR.activate(sketchrockwell);
 // of the entire Flash movie to be a light grey, and the `color` of the text to
 // be red. Read more about styling at <http://wiki.novemberborn.net/sifr3/Styling>.
 sIFR.replace(sketchrockwell, {
-  selector: 'h1',
-  css: '.sIFR-root { background-color: rgb(149,101,63); color: rgb(218, 222, 221); }'
+  selector: 'heading',
+  css: '.sIFR-root { background-color: #95653F; color: #DADEDD; }'
 });
