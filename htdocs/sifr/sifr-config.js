@@ -52,7 +52,7 @@ sIFR.activate(sketchrockwell);
 // be red. Read more about styling at <http://wiki.novemberborn.net/sifr3/Styling>.
 
 sIFR.replace(sketchrockwell, {
-  selector: '.heading-name',
+  selector: '.ensketchify',
   css: '.sIFR-root { background-color: #95653F; color: #DADEDD; }',
   transparent: true,
 });

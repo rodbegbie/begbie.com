@@ -1,0 +1,148 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+
+	<title>test</title>
+	
+	<link rel="stylesheet" href="sifr.css" type="text/css"/>
+	<script src="sifr.js" type="text/javascript"></script>
+	<script src="sifr-config.js" type="text/javascript"></script>
+	
+	<style type="text/css">
+		body {
+			margin: 0 0 0 0;
+		}
+		
+		.avatar {
+			float: right;
+			width: 125px;
+			height: 125px;
+		}
+		
+		.heading {
+			border-bottom: solid 6px #DADEDD;
+			background: #95653F;
+			color: #DADEDD;
+		}
+		
+		.heading-name {
+			padding-left: 1em;
+			padding-top: 1em;
+		}
+
+		.footer {
+			border-top: solid 6px #DADEDD;
+			background: #95653F;
+			color: #DADEDD;
+			padding-left: 20px;
+			padding-top: 10px;
+			padding-bottom: 10px;
+			font-size: 14px;
+			line-height: 14px;
+			text-align: center;
+		}
+		
+		.pagebody {
+			padding-left: 10em;
+			padding-right: 10em;
+			padding-top: 2em;
+			padding-bottom: 1em;
+			font: normal 14px/20px 'Gill Sans', Verdana, Sans-serif;
+			
+		}
+		
+	</style>
+	
+</head>
+
+<body>
+	<div class="heading">
+		<div class="avatar">
+			<img src="images/avatar125.png" width="125" height="125"/>
+		</div>
+		<div class="heading-name"><img src="images/RodBegbie.png"></div>
+	</div>
+	<div class="pagebody">
+
+		<h1>What is <em>GPG</em>?</h1>
+		<hr/>
+		<p>
+		Hi! You probably followed the link at the bottom of an email from me and are
+		now wondering what 'gpg' and that block of gibberish at the end of my email
+		are. The short explanation: gpg stands for 
+		<a href="http://www.gnupg.org">GNU Privacy Guard</a> and is a cryptographic
+		software package I use to encrypt and digitally sign email. <em>NOTE: This page explains what gpg and pgp <em>do</em> and <em>not</em> how to use gpg.</em>
+
+		</p>
+		<h2>What is a digital signature?</h2>
+		<p>
+		Obviously, my mail is not encrypted (you can read it, can't you?).  Instead, it
+		is protected by a <em>digital signature</em>.  To explain this, you need to
+		know that email is very easy to forge: you can write anything you want into the
+		'From:' header of the email you send, it doesn't need to be your name and email
+		address.  Also, mail can be modified on its way from sender to recipient (on
+		purpose or just because of some software problem).  A digital signature
+		protects the recipients of my mails from both these problems: everybody who
+		receives an email from me can without doubt confirm that it was me who sent the
+		mail and that nobody tinkered with it, by verifying the email with the gpg or
+		pgp software and with my <em>public key</em>.
+		</p>
+		<h2>Why?</h2>
+		<p>
+		But why do I sign my mail? Recently, some efforts are made by governments to
+		regulate the use of 'dangerous' technology (and cryptography is often regarded
+		as one of those). Signing my e-mail on one side is a statement that I do not
+		think such technology should be regulated, and on the other side it's just that
+		I like to play around with this technology.  And, of course, just in case
+		somebody really wants to send fake emails that appear to come from me, I'm
+		protected because if an email comes from me, it usually is digitally signed.
+		</p>
+		<h2>But how can this work?</h2>
+
+		<p> 
+		To sign or encrypt an email, <i>keys</i> are used - a key is like a password.
+		Every key has two parts: one that I keep as a secret, and another that I
+		publish.  In the case of a digital signature on an email, everybody receiving
+		the mail can verify the signature with the public part of my key - and so he
+		can see that the email has not been (maliciously or not) modified and that I
+		was really the author of the email.
+		</p>
+		<p> 
+		The biggest problem with email encryption and signing emails is that (in
+		the case of encryption) the sender has to know that the encryption key really
+		belongs to the person it says, or (in the case of a signature) that the
+		signature was really made by the person it claims (after all, I could just as
+		well claim to be 'Monica Lewinsky', and put that name on my digital signature).
+		<em>Signing a key</em> solves exactly this problem:  When somebody signs my
+		key, he confirms that this electronic key really belongs to the person 'Rod
+		Begbie'. The idea of signing one anothers key is called the <em>Web of
+		Trust</em> - this is of course a very short description, a better (and longer)
+		one can be found at <a href="http://www.rubin.ch/pgp/weboftrust"
+		>http://www.rubin.ch/pgp/weboftrust</a>
+		</p>
+
+		<p>
+		There are many sources for more information, a search on <a
+		href="http://www.google.com/search?q=introduction+gpg">google</a> should give
+		some pointers. Some very good documentation is contained in the <a
+		href="http://www.gnupg.org/gph/en/manual.html#WISE">The GNU Privacy
+		Handbook</a>.
+		</p>
+		<hr/>
+		<div style="font-size:x-small;text-align:right;">
+		Based upon the "What is GPG?" page of Adrian von Bidder - 
+		<a href="mailto:avbidder+gpg@fortytwo.ch">avbidder+gpg@fortytwo.ch</a>.  You
+		may use, modify and/or redistribute this text in any way you wish as long as
+		(i) you credit him as original author and (ii) the license on the redistributed
+		work does contain these two conditions.
+		</div>
+
+	</div>
+	<div class="footer">
+		<a href="mailto:rod@arsecandle.org">rod@arsecandle.org</a> / +1 (617) 784 6594
+	</div>
+</body>
+</html>
