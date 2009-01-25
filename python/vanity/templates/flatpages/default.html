@@ -35,9 +35,6 @@
 			border-top: solid 6px #DADEDD;
 			background: #95653F;
 			color: #DADEDD;
-			padding-left: 1em;
-			padding-top: 1em;
-			padding-bottom: 1em;
 			font-size: 14px;
 			text-align: center;
 		}
@@ -48,26 +45,58 @@
 			padding-top: 2em;
 			padding-bottom: 1em;
 			font: normal 14px/20px 'Gill Sans', 'Gill Sans MT', Verdana, Sans-serif;			
-		}		
+		}
+		
+		/*  
+		Sticky Footer Solution
+		by Steve Hatcher 
+		http://stever.ca
+		http://www.cssstickyfooter.com
+		*/
+
+		html, body, #wrap {height: 100%;}
+
+		body > #wrap {height: auto; min-height: 100%;}
+
+		#main {padding-bottom: 45px;}  /* must be same height as the footer */
+
+		#footer {position: relative;
+			margin-top: -36px; /* negative value of footer height */
+			height: 30px;
+			clear:both;} 
+
+		/* CLEAR FIX*/
+		.clearfix:after {content: ".";
+			display: block;
+			height: 0;
+			clear: both;
+			visibility: hidden;}
+		.clearfix {display: inline-block;}
+		/* Hides from IE-mac \*/
+		* html .clearfix { height: 1%;}
+		.clearfix {display: block;}
+		/* End hide from IE-mac */
 	</style>
 	
 </head>
 
 <body>
-	<div class="heading">
-		<div class="avatar">
-			<img src="http://static.begbie.com/images/avatar125.png" width="125" height="125" alt="" />
+	<div id="wrap">
+		<div class="heading">
+			<div class="avatar">
+				<img src="http://static.begbie.com/images/avatar125.png" width="125" height="125" alt="" />
+			</div>
+			<div class="heading-name">
+				<img src="http://static.begbie.com/images/RodBegbie.png" width="434" height="78" alt="Rod Begbie" />
+			</div>
 		</div>
-		<div class="heading-name">
-			<img src="http://static.begbie.com/images/RodBegbie.png" width="434" height="78" alt="Rod Begbie" />
+		<div id="main" class="clearfix pagebody">
+
+	{{ flatpage.content }}
+
 		</div>
 	</div>
-	<div class="pagebody">
-
-{{ flatpage.content }}
-
-	</div>
-	<div class="footer">
+	<div id="footer" class="footer">
 	</div>
 </body>
 </html>

@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>currentDocument</key>
-	<string>htdocs/images/avatar.svg</string>
+	<string>python/vanity/urls.py</string>
 	<key>documents</key>
 	<array>
 		<dict>
@@ -21,7 +21,37 @@
 	<integer>200</integer>
 	<key>metaData</key>
 	<dict>
-		<key>htdocs/images/avatar.svg</key>
+		<key>python/vanity/settings.py</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>0</integer>
+				<key>line</key>
+				<integer>106</integer>
+			</dict>
+			<key>columnSelection</key>
+			<false/>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>24</integer>
+			<key>selectFrom</key>
+			<dict>
+				<key>column</key>
+				<integer>0</integer>
+				<key>line</key>
+				<integer>93</integer>
+			</dict>
+			<key>selectTo</key>
+			<dict>
+				<key>column</key>
+				<integer>0</integer>
+				<key>line</key>
+				<integer>106</integer>
+			</dict>
+		</dict>
+		<key>python/vanity/templates/flatpages/default.html</key>
 		<dict>
 			<key>caret</key>
 			<dict>
@@ -31,44 +61,30 @@
 				<integer>0</integer>
 			</dict>
 			<key>firstVisibleColumn</key>
-			<integer>2138</integer>
+			<integer>0</integer>
 			<key>firstVisibleLine</key>
-			<integer>193</integer>
+			<integer>0</integer>
 		</dict>
-		<key>htdocs/sifr/sifr-config.js</key>
+		<key>python/vanity/urls.py</key>
 		<dict>
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>30</integer>
+				<integer>1</integer>
 				<key>line</key>
-				<integer>54</integer>
+				<integer>16</integer>
 			</dict>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
 			<integer>0</integer>
-		</dict>
-		<key>htdocs/sifr/test.html</key>
-		<dict>
-			<key>caret</key>
-			<dict>
-				<key>column</key>
-				<integer>22</integer>
-				<key>line</key>
-				<integer>45</integer>
-			</dict>
-			<key>firstVisibleColumn</key>
-			<integer>0</integer>
-			<key>firstVisibleLine</key>
-			<integer>19</integer>
 		</dict>
 	</dict>
 	<key>openDocuments</key>
 	<array>
-		<string>htdocs/sifr/test.html</string>
-		<string>htdocs/sifr/sifr-config.js</string>
-		<string>htdocs/images/avatar.svg</string>
+		<string>python/vanity/settings.py</string>
+		<string>python/vanity/urls.py</string>
+		<string>python/vanity/templates/flatpages/default.html</string>
 	</array>
 	<key>showFileHierarchyDrawer</key>
 	<false/>
@@ -82,20 +98,13 @@
 			<true/>
 			<key>subItems</key>
 			<dict>
-				<key>graphics</key>
-				<dict>
-					<key>isExpanded</key>
-					<true/>
-					<key>subItems</key>
-					<dict/>
-				</dict>
-				<key>htdocs</key>
+				<key>python</key>
 				<dict>
 					<key>isExpanded</key>
 					<true/>
 					<key>subItems</key>
 					<dict>
-						<key>images</key>
+						<key>vanity</key>
 						<dict>
 							<key>isExpanded</key>
 							<true/>
@@ -108,6 +117,6 @@
 		</dict>
 	</dict>
 	<key>windowFrame</key>
-	<string>{{401, 219}, {977, 649}}</string>
+	<string>{{401, 217}, {1017, 651}}</string>
 </dict>
 </plist>
