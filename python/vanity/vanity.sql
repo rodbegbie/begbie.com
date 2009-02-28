@@ -31,6 +31,7 @@ INSERT INTO "django_admin_log" VALUES(19,'2009-01-04 21:28:32.139970',1,10,'1','
 INSERT INTO "django_admin_log" VALUES(20,'2009-01-04 21:29:28.764464',1,7,'3','/gpg/public-key/ -- GPG Public Key',2,'Changed content.');
 INSERT INTO "django_admin_log" VALUES(21,'2009-01-04 21:29:41.141304',1,9,'1','begbie.com',2,'Changed domain.');
 INSERT INTO "django_admin_log" VALUES(22,'2009-01-04 21:31:34.585995',1,10,'2','/love.html ---> http://olde.begbie.com/love.html',1,'');
+INSERT INTO "django_admin_log" VALUES(23,'2009-02-28 00:20:25.241376',1,7,'1','/ -- My Home Page',2,'Changed content.');
 CREATE TABLE "auth_permission" (
     "id" integer NOT NULL PRIMARY KEY,
     "name" varchar(50) NOT NULL,
@@ -85,7 +86,7 @@ CREATE TABLE "auth_user" (
     "last_login" datetime NOT NULL,
     "date_joined" datetime NOT NULL
 );
-INSERT INTO "auth_user" VALUES(1,'rod','','','rod@begbie.com','sha1$44f4f$809c6702557fa0e65b58a963e67af5d0df735741',1,1,1,'2009-01-05 11:23:30.176958','2009-01-03 18:14:40.884515');
+INSERT INTO "auth_user" VALUES(1,'rod','','','rod@begbie.com','sha1$44f4f$809c6702557fa0e65b58a963e67af5d0df735741',1,1,1,'2009-02-28 00:20:10.239124','2009-01-03 18:14:40.884515');
 CREATE TABLE "auth_message" (
     "id" integer NOT NULL PRIMARY KEY,
     "user_id" integer NOT NULL REFERENCES "auth_user" ("id"),
@@ -154,7 +155,7 @@ INSERT INTO "django_flatpage" VALUES(1,'/','My Home Page','<h1>Welcome to my hom
 
 <h2>Good day to you, sir.</h2>
 
-I said, "Good day!"',0,'',0);
+<p>I said, "Good day!"</p>',0,'',0);
 INSERT INTO "django_flatpage" VALUES(2,'/gpg/','What is GPG?','<h1>What is <em>GPG</em>?</h1>
 <hr/>
 <p>
@@ -769,6 +770,10 @@ INSERT INTO "django_session" VALUES('8ab3ad9787ea151e711240171bb87c11','gAJ9cQEo
 cy5Nb2RlbEJhY2tlbmRxA1UNX2F1dGhfdXNlcl9pZHEESwF1LjE0YmViNTVkYTUwOTA4OTU4N2Nm
 Y2UzY2ZkNGY4ODBm
 ','2009-01-19 11:23:30.192871');
+INSERT INTO "django_session" VALUES('eef172ccf1dbd4127020b357f83a8675','gAJ9cQEoVRJfYXV0aF91c2VyX2JhY2tlbmRxAlUpZGphbmdvLmNvbnRyaWIuYXV0aC5iYWNrZW5k
+cy5Nb2RlbEJhY2tlbmRxA1UNX2F1dGhfdXNlcl9pZHEESwF1LjE0YmViNTVkYTUwOTA4OTU4N2Nm
+Y2UzY2ZkNGY4ODBm
+','2009-03-14 00:20:10.297927');
 CREATE TABLE "django_site" (
     "id" integer NOT NULL PRIMARY KEY,
     "domain" varchar(100) NOT NULL,
@@ -802,8 +807,8 @@ CREATE TABLE "django_flatpage_sites" (
 INSERT INTO "django_flatpage_sites" VALUES(2,2,1);
 INSERT INTO "django_flatpage_sites" VALUES(4,4,1);
 INSERT INTO "django_flatpage_sites" VALUES(7,5,1);
-INSERT INTO "django_flatpage_sites" VALUES(8,1,1);
 INSERT INTO "django_flatpage_sites" VALUES(9,3,1);
+INSERT INTO "django_flatpage_sites" VALUES(10,1,1);
 CREATE TABLE "django_redirect" (
     "id" integer NOT NULL PRIMARY KEY,
     "site_id" integer NOT NULL REFERENCES "django_site" ("id"),

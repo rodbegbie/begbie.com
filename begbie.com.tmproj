@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>currentDocument</key>
-	<string>python/vanity/urls.py</string>
+	<string>python/vanity/vanity.sql</string>
 	<key>documents</key>
 	<array>
 		<dict>
@@ -63,7 +63,7 @@
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
-			<integer>0</integer>
+			<integer>40</integer>
 		</dict>
 		<key>python/vanity/urls.py</key>
 		<dict>
@@ -79,12 +79,27 @@
 			<key>firstVisibleLine</key>
 			<integer>0</integer>
 		</dict>
+		<key>python/vanity/vanity.sql</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>35</integer>
+				<key>line</key>
+				<integer>223</integer>
+			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>187</integer>
+		</dict>
 	</dict>
 	<key>openDocuments</key>
 	<array>
 		<string>python/vanity/settings.py</string>
 		<string>python/vanity/urls.py</string>
 		<string>python/vanity/templates/flatpages/default.html</string>
+		<string>python/vanity/vanity.sql</string>
 	</array>
 	<key>showFileHierarchyDrawer</key>
 	<false/>
@@ -109,7 +124,23 @@
 							<key>isExpanded</key>
 							<true/>
 							<key>subItems</key>
-							<dict/>
+							<dict>
+								<key>templates</key>
+								<dict>
+									<key>isExpanded</key>
+									<true/>
+									<key>subItems</key>
+									<dict>
+										<key>flatpages</key>
+										<dict>
+											<key>isExpanded</key>
+											<true/>
+											<key>subItems</key>
+											<dict/>
+										</dict>
+									</dict>
+								</dict>
+							</dict>
 						</dict>
 					</dict>
 				</dict>
