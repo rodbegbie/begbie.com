@@ -1,3 +1,4 @@
+PRAGMA foreign_keys=OFF;
 BEGIN TRANSACTION;
 CREATE TABLE "django_admin_log" (
     "id" integer NOT NULL PRIMARY KEY,
@@ -32,6 +33,10 @@ INSERT INTO "django_admin_log" VALUES(20,'2009-01-04 21:29:28.764464',1,7,'3','/
 INSERT INTO "django_admin_log" VALUES(21,'2009-01-04 21:29:41.141304',1,9,'1','begbie.com',2,'Changed domain.');
 INSERT INTO "django_admin_log" VALUES(22,'2009-01-04 21:31:34.585995',1,10,'2','/love.html ---> http://olde.begbie.com/love.html',1,'');
 INSERT INTO "django_admin_log" VALUES(23,'2009-02-28 00:20:25.241376',1,7,'1','/ -- My Home Page',2,'Changed content.');
+INSERT INTO "django_admin_log" VALUES(24,'2010-05-19 00:21:52.149713',1,7,'5','/about/ -- About Me',2,'Changed content.');
+INSERT INTO "django_admin_log" VALUES(25,'2010-07-09 11:48:12.251829',1,7,'1','/ -- My Home Page',2,'Changed content.');
+INSERT INTO "django_admin_log" VALUES(26,'2010-12-28 19:18:59.453461',1,7,'5','/about/ -- About Me',2,'Changed content.');
+INSERT INTO "django_admin_log" VALUES(27,'2010-12-28 19:21:33.644260',1,7,'5','/about/ -- About Me',2,'Changed content.');
 CREATE TABLE "auth_permission" (
     "id" integer NOT NULL PRIMARY KEY,
     "name" varchar(50) NOT NULL,
@@ -86,7 +91,7 @@ CREATE TABLE "auth_user" (
     "last_login" datetime NOT NULL,
     "date_joined" datetime NOT NULL
 );
-INSERT INTO "auth_user" VALUES(1,'rod','','','rod@begbie.com','sha1$44f4f$809c6702557fa0e65b58a963e67af5d0df735741',1,1,1,'2009-02-28 00:20:10.239124','2009-01-03 18:14:40.884515');
+INSERT INTO "auth_user" VALUES(1,'rod','','','rod@begbie.com','sha1$44f4f$809c6702557fa0e65b58a963e67af5d0df735741',1,1,1,'2010-12-28 19:13:58.959662','2009-01-03 18:14:40.884515');
 CREATE TABLE "auth_message" (
     "id" integer NOT NULL PRIMARY KEY,
     "user_id" integer NOT NULL REFERENCES "auth_user" ("id"),
@@ -141,7 +146,7 @@ INSERT INTO "django_flatpage" VALUES(1,'/','My Home Page','<h1>Welcome to my hom
 
 <p>I entrust my digital photos to the fine, fine folks at <a href="http://flickr.com/photos/groovymother/" rel="me">Flickr</a> and post readily to <a href="http://twitter.com/rodbegbie" rel="me">Twitter</a>.</p>
 
-<p>Presently, my preferred social network haunts are <a href="http://www.facebook.com/people/Rod-Begbie/500034231" rel="me">Facebook</a> for personal purposes, and <a href="http://www.linkedin.com/in/cluefulsoftwareengineer" rel="me">LinkedIn</a> for professional. Should you wish to investigate some of the code I have written, you can locate it at the good ship <a href="http://github.com/rodbegbie" rel="me">GitHub</a>.</p>
+<p>Presently, my preferred social network haunts are <a href="http://www.facebook.com/rodbegbie" rel="me">Facebook</a> for personal purposes, and <a href="http://www.linkedin.com/in/cluefulsoftwareengineer" rel="me">LinkedIn</a> for professional. Should you wish to investigate some of the code I have written, you can locate it at the good ship <a href="http://github.com/rodbegbie" rel="me">GitHub</a>.</p>
 
 <p>If all that doesn''t sate your Begbie-related appetite, nearly every digital footprint I leave ends up on <a href="http://friendfeed.com/rodbegbie" rel="me">FriendFeed</a>.</p>
 
@@ -750,13 +755,17 @@ circle; vertical-align: top; font-size: smaller; margin-right:
 </html>',0,'flatpages/nocruft.html',0);
 INSERT INTO "django_flatpage" VALUES(5,'/about/','About Me','<p>Hello.  I''m Rod Begbie.</p>
 
-<p>I''m a 32-year-old geek, originally from <a href="http://en.wikipedia.org/wiki/Tillicoultry" title="Tillicoultry - Wikipedia, the free encyclopedia">Tillicoultry</a> in Scotland, but currently leaving my heart in <a href="http://en.wikipedia.org/wiki/San_Francisco%2C_California" title="San Francisco, California - Wikipedia, the free encyclopedia">San Francisco</a>. Prior to SF, I spent ten glorious years living in the vicinity of <a href="http://en.wikipedia.org/wiki/Boston%2C_Massachusetts" title="Boston, Massachusetts - Wikipedia, the free encyclopedia">Boston, MA</a>.</p>
+<p>I''m a 34-year-old geek, originally from <a href="http://en.wikipedia.org/wiki/Tillicoultry" title="Tillicoultry - Wikipedia, the free encyclopedia">Tillicoultry</a> in Scotland, but currently leaving my heart in <a href="http://en.wikipedia.org/wiki/San_Francisco%2C_California" title="San Francisco, California - Wikipedia, the free encyclopedia">San Francisco</a>. Prior to SF, I spent ten glorious years living in the vicinity of <a href="http://en.wikipedia.org/wiki/Boston%2C_Massachusetts" title="Boston, Massachusetts - Wikipedia, the free encyclopedia">Boston, MA</a>.</p>
 
-<p>My day job is as a senior software engineer and sheep herder at <a href="http://www.slide.com/">Slide</a>, makers of the finest social networking gizmos and distractions.</p>
+<p>My "day" job is as co-founder of <a href="http://offlinelabs.com/">Offline Labs</a>, building social software to help people be social in the real world.<p>
+
+<p>Immediately prior, I was an Engineering Lead and Dragon Tamer at <a href="http://www.slide.com/">Slide</a>, makers of the finest social networking gizmos and distractions.  Slide was purchased by Google shortly before I left, so I had the prestigious title of "Member of Technical Staff at Google" for a grand total of 39 days.</p>
 
 <p>Previously, I have been been employed as an API architect by <a href="http://en.wikipedia.org/wiki/Current_TV">Current TV</a>, in the R&D labs of a large consumer electronics company whose name <a href="http://en.wikipedia.org/wiki/Bose_Corporation" title="Bose - Wikipedia, the free encyclopedia">Rhymes With Nose</a>, consulting as an "Architect for the New Economy" at a company whose name is an <a href="http://en.wikipedia.org/wiki/Sapient_%28company%29" title="Sapient - Wikipedia, the free encyclopedia">Anagram Of Panties</a>, and I ducked out the (first) dot-com-bubble-burst in a basement of a bank doing fixed-income annuity analysis, which is as dull as it sounds.</p>
 
-<p>I''m married to the lovely <a href="http://laughatlantis.com/" title="LaughAtlantis">Joy</a>, own two splendidly-dumb <a href="http://flickr.com/photos/groovymother/tags/basset/" title="Flickr: rodbegbie''s photos tagged with basset">basset hounds</a>, and cannot complete a list without invoking the <a href="http://en.wikipedia.org/wiki/Rule_of_three_%28writing%29#Comedy" title="Rule of three - Wikipedia, the free encyclopedia">comedy rule of three</a>.</p>',0,'',0);
+<p>I regularly give talks to high-school students explaining why software engineering is an AMAZING profession that they should consider, and had my writing featured in the O''Reilly publication <a href="http://amazon.com/gp/product/0596809484/?tag=groovymother-20">97 Things Every Programmer Should Know</a>.</p>
+
+<p>I''m married to the lovely <a href="http://laughatlantis.com/" title="LaughAtlantis">Joy</a>, own a splendidly-dumb <a href="http://flickr.com/photos/groovymother/tags/basset/" title="Flickr: rodbegbie''s photos tagged with basset">basset hound</a>, and rarely complete a list without invoking the <a href="http://en.wikipedia.org/wiki/Rule_of_three_%28writing%29#Comedy" title="Rule of three - Wikipedia, the free encyclopedia">comedy rule of three</a>.</p>',0,'',0);
 CREATE TABLE "django_session" (
     "session_key" varchar(40) NOT NULL PRIMARY KEY,
     "session_data" text NOT NULL,
@@ -774,6 +783,43 @@ INSERT INTO "django_session" VALUES('eef172ccf1dbd4127020b357f83a8675','gAJ9cQEo
 cy5Nb2RlbEJhY2tlbmRxA1UNX2F1dGhfdXNlcl9pZHEESwF1LjE0YmViNTVkYTUwOTA4OTU4N2Nm
 Y2UzY2ZkNGY4ODBm
 ','2009-03-14 00:20:10.297927');
+INSERT INTO "django_session" VALUES('c64aad1cf3765b00798425633e4cd8a4','gAJ9cQEoVRJfYXV0aF91c2VyX2JhY2tlbmRxAlUpZGphbmdvLmNvbnRyaWIuYXV0aC5iYWNrZW5k
+cy5Nb2RlbEJhY2tlbmRxA1UNX2F1dGhfdXNlcl9pZHEESwF1LjE0YmViNTVkYTUwOTA4OTU4N2Nm
+Y2UzY2ZkNGY4ODBm
+','2010-05-02 01:18:37.085394');
+INSERT INTO "django_session" VALUES('db9119e669c31891647ec0f5a031bd5a','gAJ9cQEoVRJfYXV0aF91c2VyX2JhY2tlbmRxAlUpZGphbmdvLmNvbnRyaWIuYXV0aC5iYWNrZW5k
+cy5Nb2RlbEJhY2tlbmRxA1UNX2F1dGhfdXNlcl9pZHEESwF1LjE0YmViNTVkYTUwOTA4OTU4N2Nm
+Y2UzY2ZkNGY4ODBm
+','2010-06-02 00:21:26.087888');
+INSERT INTO "django_session" VALUES('b690047a91c8e6bc044eaf19e9c93ff7','gAJ9cQEoVRJfYXV0aF91c2VyX2JhY2tlbmRxAlUpZGphbmdvLmNvbnRyaWIuYXV0aC5iYWNrZW5k
+cy5Nb2RlbEJhY2tlbmRxA1UNX2F1dGhfdXNlcl9pZHEESwF1LjE0YmViNTVkYTUwOTA4OTU4N2Nm
+Y2UzY2ZkNGY4ODBm
+','2010-07-23 11:47:38.791027');
+INSERT INTO "django_session" VALUES('5dbc5e5c3196cb5a7ea36b52227a9bfd','gAJ9cQFVCnRlc3Rjb29raWVxAlUGd29ya2VkcQNzLjg2ZmU0YTc3NzZiMDVmYzgzMThmY2EyY2Mz
+ZDY2NGNl
+','2010-08-03 20:54:58.468312');
+INSERT INTO "django_session" VALUES('90ea64901f228fe86f5cdcda37aea607','gAJ9cQFVCnRlc3Rjb29raWVxAlUGd29ya2VkcQNzLjg2ZmU0YTc3NzZiMDVmYzgzMThmY2EyY2Mz
+ZDY2NGNl
+','2010-08-03 20:55:02.474964');
+INSERT INTO "django_session" VALUES('14584be0876fb91c94a5563664781dee','gAJ9cQFVCnRlc3Rjb29raWVxAlUGd29ya2VkcQNzLjg2ZmU0YTc3NzZiMDVmYzgzMThmY2EyY2Mz
+ZDY2NGNl
+','2010-09-04 01:59:29.623701');
+INSERT INTO "django_session" VALUES('198d9c71c7adbff932c5db68642c5cea','gAJ9cQFVCnRlc3Rjb29raWVxAlUGd29ya2VkcQNzLjg2ZmU0YTc3NzZiMDVmYzgzMThmY2EyY2Mz
+ZDY2NGNl
+','2010-09-04 01:59:33.110383');
+INSERT INTO "django_session" VALUES('99b5c9b1c676e3c4015b3c31f828ef51','gAJ9cQFVCnRlc3Rjb29raWVxAlUGd29ya2VkcQNzLjg2ZmU0YTc3NzZiMDVmYzgzMThmY2EyY2Mz
+ZDY2NGNl
+','2010-09-04 01:59:36.686987');
+INSERT INTO "django_session" VALUES('5902bf5fc2be1feff82b8f73eb1ce776','gAJ9cQFVCnRlc3Rjb29raWVxAlUGd29ya2VkcQNzLjg2ZmU0YTc3NzZiMDVmYzgzMThmY2EyY2Mz
+ZDY2NGNl
+','2010-09-04 01:59:38.483616');
+INSERT INTO "django_session" VALUES('e921d917343ec713173add0efa31bda4','gAJ9cQFVCnRlc3Rjb29raWVxAlUGd29ya2VkcQNzLjg2ZmU0YTc3NzZiMDVmYzgzMThmY2EyY2Mz
+ZDY2NGNl
+','2010-12-18 08:55:31.932557');
+INSERT INTO "django_session" VALUES('bc4010a29ab9af19664baff738d37696','gAJ9cQEoVRJfYXV0aF91c2VyX2JhY2tlbmRxAlUpZGphbmdvLmNvbnRyaWIuYXV0aC5iYWNrZW5k
+cy5Nb2RlbEJhY2tlbmRxA1UNX2F1dGhfdXNlcl9pZHEESwF1LjE0YmViNTVkYTUwOTA4OTU4N2Nm
+Y2UzY2ZkNGY4ODBm
+','2011-01-11 19:13:58.967882');
 CREATE TABLE "django_site" (
     "id" integer NOT NULL PRIMARY KEY,
     "domain" varchar(100) NOT NULL,
@@ -806,9 +852,9 @@ CREATE TABLE "django_flatpage_sites" (
 );
 INSERT INTO "django_flatpage_sites" VALUES(2,2,1);
 INSERT INTO "django_flatpage_sites" VALUES(4,4,1);
-INSERT INTO "django_flatpage_sites" VALUES(7,5,1);
 INSERT INTO "django_flatpage_sites" VALUES(9,3,1);
-INSERT INTO "django_flatpage_sites" VALUES(10,1,1);
+INSERT INTO "django_flatpage_sites" VALUES(12,1,1);
+INSERT INTO "django_flatpage_sites" VALUES(13,5,1);
 CREATE TABLE "django_redirect" (
     "id" integer NOT NULL PRIMARY KEY,
     "site_id" integer NOT NULL REFERENCES "django_site" ("id"),
