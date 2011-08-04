@@ -37,6 +37,7 @@ INSERT INTO "django_admin_log" VALUES(24,'2010-05-19 00:21:52.149713',1,7,'5','/
 INSERT INTO "django_admin_log" VALUES(25,'2010-07-09 11:48:12.251829',1,7,'1','/ -- My Home Page',2,'Changed content.');
 INSERT INTO "django_admin_log" VALUES(26,'2010-12-28 19:18:59.453461',1,7,'5','/about/ -- About Me',2,'Changed content.');
 INSERT INTO "django_admin_log" VALUES(27,'2010-12-28 19:21:33.644260',1,7,'5','/about/ -- About Me',2,'Changed content.');
+INSERT INTO "django_admin_log" VALUES(28,'2011-08-04 14:34:02.366204',1,7,'5','/about/ -- About Me',2,'Changed content.');
 CREATE TABLE "auth_permission" (
     "id" integer NOT NULL PRIMARY KEY,
     "name" varchar(50) NOT NULL,
@@ -91,7 +92,7 @@ CREATE TABLE "auth_user" (
     "last_login" datetime NOT NULL,
     "date_joined" datetime NOT NULL
 );
-INSERT INTO "auth_user" VALUES(1,'rod','','','rod@begbie.com','sha1$44f4f$809c6702557fa0e65b58a963e67af5d0df735741',1,1,1,'2010-12-28 19:13:58.959662','2009-01-03 18:14:40.884515');
+INSERT INTO "auth_user" VALUES(1,'rod','','','rod@begbie.com','sha1$44f4f$809c6702557fa0e65b58a963e67af5d0df735741',1,1,1,'2011-08-04 14:29:41.512653','2009-01-03 18:14:40.884515');
 CREATE TABLE "auth_message" (
     "id" integer NOT NULL PRIMARY KEY,
     "user_id" integer NOT NULL REFERENCES "auth_user" ("id"),
@@ -757,7 +758,7 @@ INSERT INTO "django_flatpage" VALUES(5,'/about/','About Me','<p>Hello.  I''m Rod
 
 <p>I''m a 34-year-old geek, originally from <a href="http://en.wikipedia.org/wiki/Tillicoultry" title="Tillicoultry - Wikipedia, the free encyclopedia">Tillicoultry</a> in Scotland, but currently leaving my heart in <a href="http://en.wikipedia.org/wiki/San_Francisco%2C_California" title="San Francisco, California - Wikipedia, the free encyclopedia">San Francisco</a>. Prior to SF, I spent ten glorious years living in the vicinity of <a href="http://en.wikipedia.org/wiki/Boston%2C_Massachusetts" title="Boston, Massachusetts - Wikipedia, the free encyclopedia">Boston, MA</a>.</p>
 
-<p>My "day" job is as co-founder of <a href="http://offlinelabs.com/">Offline Labs</a>, building social software to help people be social in the real world.<p>
+<p>My "day" job is as co-founder of <a href="http://offlinelabs.com/">Offline Labs</a>. We''re building <a href="http://sosh.com/">Sōsh</a>, your handy-dandy guide to <a href="http://sosh.com/">things to do in San Francisco this weekend</a>.</p>
 
 <p>Immediately prior, I was an Engineering Lead and Dragon Tamer at <a href="http://www.slide.com/">Slide</a>, makers of the finest social networking gizmos and distractions.  Slide was purchased by Google shortly before I left, so I had the prestigious title of "Member of Technical Staff at Google" for a grand total of 39 days.</p>
 
@@ -765,7 +766,7 @@ INSERT INTO "django_flatpage" VALUES(5,'/about/','About Me','<p>Hello.  I''m Rod
 
 <p>I regularly give talks to high-school students explaining why software engineering is an AMAZING profession that they should consider, and had my writing featured in the O''Reilly publication <a href="http://amazon.com/gp/product/0596809484/?tag=groovymother-20">97 Things Every Programmer Should Know</a>.</p>
 
-<p>I''m married to the lovely <a href="http://laughatlantis.com/" title="LaughAtlantis">Joy</a>, own a splendidly-dumb <a href="http://flickr.com/photos/groovymother/tags/basset/" title="Flickr: rodbegbie''s photos tagged with basset">basset hound</a>, and rarely complete a list without invoking the <a href="http://en.wikipedia.org/wiki/Rule_of_three_%28writing%29#Comedy" title="Rule of three - Wikipedia, the free encyclopedia">comedy rule of three</a>.</p>',0,'',0);
+<p>I like basset hounds.</p>',0,'',0);
 CREATE TABLE "django_session" (
     "session_key" varchar(40) NOT NULL PRIMARY KEY,
     "session_data" text NOT NULL,
@@ -820,6 +821,130 @@ INSERT INTO "django_session" VALUES('bc4010a29ab9af19664baff738d37696','gAJ9cQEo
 cy5Nb2RlbEJhY2tlbmRxA1UNX2F1dGhfdXNlcl9pZHEESwF1LjE0YmViNTVkYTUwOTA4OTU4N2Nm
 Y2UzY2ZkNGY4ODBm
 ','2011-01-11 19:13:58.967882');
+INSERT INTO "django_session" VALUES('f7321aebaae2458603fb7a38c7fafb1e','OGRiMzg1MDY0NTcxODg2OTZjNGM5NjFiOGNhMTY5MTZjOGZmZmM5ZDqAAn1xAVUKdGVzdGNvb2tp
+ZXECVQZ3b3JrZWRxA3Mu
+','2011-05-21 15:07:48.040514');
+INSERT INTO "django_session" VALUES('d72a446ccccf3cca7968adb828b2a6e5','OGRiMzg1MDY0NTcxODg2OTZjNGM5NjFiOGNhMTY5MTZjOGZmZmM5ZDqAAn1xAVUKdGVzdGNvb2tp
+ZXECVQZ3b3JrZWRxA3Mu
+','2011-06-02 05:37:01.342313');
+INSERT INTO "django_session" VALUES('7eda6839a8a5fce4a10b5fb4e1d0c217','OGRiMzg1MDY0NTcxODg2OTZjNGM5NjFiOGNhMTY5MTZjOGZmZmM5ZDqAAn1xAVUKdGVzdGNvb2tp
+ZXECVQZ3b3JrZWRxA3Mu
+','2011-06-02 05:37:01.616440');
+INSERT INTO "django_session" VALUES('ea090d8e679cb3274a9fd2754fd67916','OGRiMzg1MDY0NTcxODg2OTZjNGM5NjFiOGNhMTY5MTZjOGZmZmM5ZDqAAn1xAVUKdGVzdGNvb2tp
+ZXECVQZ3b3JrZWRxA3Mu
+','2011-06-02 05:37:03.322213');
+INSERT INTO "django_session" VALUES('6d4b627aaf8a257891c31387e2a3dd39','OGRiMzg1MDY0NTcxODg2OTZjNGM5NjFiOGNhMTY5MTZjOGZmZmM5ZDqAAn1xAVUKdGVzdGNvb2tp
+ZXECVQZ3b3JrZWRxA3Mu
+','2011-06-02 05:37:03.522399');
+INSERT INTO "django_session" VALUES('f70a89e327fcc236b8afda8ddc442a99','OGRiMzg1MDY0NTcxODg2OTZjNGM5NjFiOGNhMTY5MTZjOGZmZmM5ZDqAAn1xAVUKdGVzdGNvb2tp
+ZXECVQZ3b3JrZWRxA3Mu
+','2011-06-02 05:37:03.732788');
+INSERT INTO "django_session" VALUES('34ea4851f594840a29139a47e82e5f98','OGRiMzg1MDY0NTcxODg2OTZjNGM5NjFiOGNhMTY5MTZjOGZmZmM5ZDqAAn1xAVUKdGVzdGNvb2tp
+ZXECVQZ3b3JrZWRxA3Mu
+','2011-06-03 23:24:12.692138');
+INSERT INTO "django_session" VALUES('1de681df6b1b8c96db00c58208c60de6','OGRiMzg1MDY0NTcxODg2OTZjNGM5NjFiOGNhMTY5MTZjOGZmZmM5ZDqAAn1xAVUKdGVzdGNvb2tp
+ZXECVQZ3b3JrZWRxA3Mu
+','2011-06-03 23:24:12.896705');
+INSERT INTO "django_session" VALUES('9f2a7de6d4569c4247967d3b2074cc9f','OGRiMzg1MDY0NTcxODg2OTZjNGM5NjFiOGNhMTY5MTZjOGZmZmM5ZDqAAn1xAVUKdGVzdGNvb2tp
+ZXECVQZ3b3JrZWRxA3Mu
+','2011-06-03 23:24:13.045698');
+INSERT INTO "django_session" VALUES('9224bd3395ae58e52a617cdfce3c085f','OGRiMzg1MDY0NTcxODg2OTZjNGM5NjFiOGNhMTY5MTZjOGZmZmM5ZDqAAn1xAVUKdGVzdGNvb2tp
+ZXECVQZ3b3JrZWRxA3Mu
+','2011-06-11 13:43:11.269126');
+INSERT INTO "django_session" VALUES('bd6fa0c06d1fc86f97e4e0a44a8cd592','OGRiMzg1MDY0NTcxODg2OTZjNGM5NjFiOGNhMTY5MTZjOGZmZmM5ZDqAAn1xAVUKdGVzdGNvb2tp
+ZXECVQZ3b3JrZWRxA3Mu
+','2011-06-11 13:43:11.958843');
+INSERT INTO "django_session" VALUES('2fd243cadeb382e710adb5c990b0bb1c','OGRiMzg1MDY0NTcxODg2OTZjNGM5NjFiOGNhMTY5MTZjOGZmZmM5ZDqAAn1xAVUKdGVzdGNvb2tp
+ZXECVQZ3b3JrZWRxA3Mu
+','2011-06-11 13:43:12.440907');
+INSERT INTO "django_session" VALUES('4dc9931edc3c75e380b2c5c7d9a1d952','OGRiMzg1MDY0NTcxODg2OTZjNGM5NjFiOGNhMTY5MTZjOGZmZmM5ZDqAAn1xAVUKdGVzdGNvb2tp
+ZXECVQZ3b3JrZWRxA3Mu
+','2011-06-11 13:43:22.689637');
+INSERT INTO "django_session" VALUES('44a5cb8d0e199f94def28c23c334fee6','OGRiMzg1MDY0NTcxODg2OTZjNGM5NjFiOGNhMTY5MTZjOGZmZmM5ZDqAAn1xAVUKdGVzdGNvb2tp
+ZXECVQZ3b3JrZWRxA3Mu
+','2011-06-11 13:43:23.094953');
+INSERT INTO "django_session" VALUES('e5aa031ecb30c03b2f77beffcdc4ba82','OGRiMzg1MDY0NTcxODg2OTZjNGM5NjFiOGNhMTY5MTZjOGZmZmM5ZDqAAn1xAVUKdGVzdGNvb2tp
+ZXECVQZ3b3JrZWRxA3Mu
+','2011-06-11 13:43:23.516280');
+INSERT INTO "django_session" VALUES('9ba9d82c4513575067e01a8f889af396','OGRiMzg1MDY0NTcxODg2OTZjNGM5NjFiOGNhMTY5MTZjOGZmZmM5ZDqAAn1xAVUKdGVzdGNvb2tp
+ZXECVQZ3b3JrZWRxA3Mu
+','2011-07-08 21:40:27.925408');
+INSERT INTO "django_session" VALUES('c20066ef623cb2c14edf53875a1c7365','OGRiMzg1MDY0NTcxODg2OTZjNGM5NjFiOGNhMTY5MTZjOGZmZmM5ZDqAAn1xAVUKdGVzdGNvb2tp
+ZXECVQZ3b3JrZWRxA3Mu
+','2011-07-08 21:40:28.101023');
+INSERT INTO "django_session" VALUES('dfe1c40bc3fe24496f19907c8edf32b9','OGRiMzg1MDY0NTcxODg2OTZjNGM5NjFiOGNhMTY5MTZjOGZmZmM5ZDqAAn1xAVUKdGVzdGNvb2tp
+ZXECVQZ3b3JrZWRxA3Mu
+','2011-07-08 21:50:43.253065');
+INSERT INTO "django_session" VALUES('8da999875eecd88c699b3a2942612acf','OGRiMzg1MDY0NTcxODg2OTZjNGM5NjFiOGNhMTY5MTZjOGZmZmM5ZDqAAn1xAVUKdGVzdGNvb2tp
+ZXECVQZ3b3JrZWRxA3Mu
+','2011-07-08 21:50:43.373917');
+INSERT INTO "django_session" VALUES('a6aa94cbadc59c55c23fad2a07a0ff0e','OGRiMzg1MDY0NTcxODg2OTZjNGM5NjFiOGNhMTY5MTZjOGZmZmM5ZDqAAn1xAVUKdGVzdGNvb2tp
+ZXECVQZ3b3JrZWRxA3Mu
+','2011-07-08 21:51:09.975106');
+INSERT INTO "django_session" VALUES('fbd167e5e23d85c56b6a0c6110d83ff3','OGRiMzg1MDY0NTcxODg2OTZjNGM5NjFiOGNhMTY5MTZjOGZmZmM5ZDqAAn1xAVUKdGVzdGNvb2tp
+ZXECVQZ3b3JrZWRxA3Mu
+','2011-07-08 21:51:10.103588');
+INSERT INTO "django_session" VALUES('942807d0634f974c6ddfc6cf25e38a7d','OGRiMzg1MDY0NTcxODg2OTZjNGM5NjFiOGNhMTY5MTZjOGZmZmM5ZDqAAn1xAVUKdGVzdGNvb2tp
+ZXECVQZ3b3JrZWRxA3Mu
+','2011-07-18 15:41:54.981529');
+INSERT INTO "django_session" VALUES('9b8cd2b9ebbe195e2a1209440b29db6d','OGRiMzg1MDY0NTcxODg2OTZjNGM5NjFiOGNhMTY5MTZjOGZmZmM5ZDqAAn1xAVUKdGVzdGNvb2tp
+ZXECVQZ3b3JrZWRxA3Mu
+','2011-07-18 15:41:55.633527');
+INSERT INTO "django_session" VALUES('02d2afd112cd775698a673ddec9c5782','OGRiMzg1MDY0NTcxODg2OTZjNGM5NjFiOGNhMTY5MTZjOGZmZmM5ZDqAAn1xAVUKdGVzdGNvb2tp
+ZXECVQZ3b3JrZWRxA3Mu
+','2011-07-18 15:41:56.233552');
+INSERT INTO "django_session" VALUES('4a12d8448062e51e8f4593a00949e1f8','OGRiMzg1MDY0NTcxODg2OTZjNGM5NjFiOGNhMTY5MTZjOGZmZmM5ZDqAAn1xAVUKdGVzdGNvb2tp
+ZXECVQZ3b3JrZWRxA3Mu
+','2011-07-20 08:54:53.007404');
+INSERT INTO "django_session" VALUES('3167a9d237221ec23f9a4d639ab4698a','OGRiMzg1MDY0NTcxODg2OTZjNGM5NjFiOGNhMTY5MTZjOGZmZmM5ZDqAAn1xAVUKdGVzdGNvb2tp
+ZXECVQZ3b3JrZWRxA3Mu
+','2011-07-20 08:54:53.307164');
+INSERT INTO "django_session" VALUES('78e00b94284f0f9b4791b652e8e9b399','OGRiMzg1MDY0NTcxODg2OTZjNGM5NjFiOGNhMTY5MTZjOGZmZmM5ZDqAAn1xAVUKdGVzdGNvb2tp
+ZXECVQZ3b3JrZWRxA3Mu
+','2011-07-20 08:54:53.567525');
+INSERT INTO "django_session" VALUES('777d2e68d1e8ffae713a200ef1eaba64','OGRiMzg1MDY0NTcxODg2OTZjNGM5NjFiOGNhMTY5MTZjOGZmZmM5ZDqAAn1xAVUKdGVzdGNvb2tp
+ZXECVQZ3b3JrZWRxA3Mu
+','2011-07-20 08:54:53.586838');
+INSERT INTO "django_session" VALUES('7dc5e18b456e3e0abc8c85b917cd20e1','OGRiMzg1MDY0NTcxODg2OTZjNGM5NjFiOGNhMTY5MTZjOGZmZmM5ZDqAAn1xAVUKdGVzdGNvb2tp
+ZXECVQZ3b3JrZWRxA3Mu
+','2011-07-20 08:54:53.841285');
+INSERT INTO "django_session" VALUES('df18e589554ad6200b05f1a2e21461b7','OGRiMzg1MDY0NTcxODg2OTZjNGM5NjFiOGNhMTY5MTZjOGZmZmM5ZDqAAn1xAVUKdGVzdGNvb2tp
+ZXECVQZ3b3JrZWRxA3Mu
+','2011-07-20 08:54:54.094555');
+INSERT INTO "django_session" VALUES('56b14adffdcb394b25e833901a281271','OGRiMzg1MDY0NTcxODg2OTZjNGM5NjFiOGNhMTY5MTZjOGZmZmM5ZDqAAn1xAVUKdGVzdGNvb2tp
+ZXECVQZ3b3JrZWRxA3Mu
+','2011-07-20 08:55:03.920698');
+INSERT INTO "django_session" VALUES('3db852aab50a3c02462a085710ae117f','OGRiMzg1MDY0NTcxODg2OTZjNGM5NjFiOGNhMTY5MTZjOGZmZmM5ZDqAAn1xAVUKdGVzdGNvb2tp
+ZXECVQZ3b3JrZWRxA3Mu
+','2011-07-20 08:55:04.177749');
+INSERT INTO "django_session" VALUES('b75803f6b5f6f62daa3e04ef121bdac0','OGRiMzg1MDY0NTcxODg2OTZjNGM5NjFiOGNhMTY5MTZjOGZmZmM5ZDqAAn1xAVUKdGVzdGNvb2tp
+ZXECVQZ3b3JrZWRxA3Mu
+','2011-07-20 08:55:04.437016');
+INSERT INTO "django_session" VALUES('bac67122e2784543317d98f2029e3d23','OGRiMzg1MDY0NTcxODg2OTZjNGM5NjFiOGNhMTY5MTZjOGZmZmM5ZDqAAn1xAVUKdGVzdGNvb2tp
+ZXECVQZ3b3JrZWRxA3Mu
+','2011-07-21 11:44:15.023887');
+INSERT INTO "django_session" VALUES('363567305ff393641dc4ef8575d3b0c1','OGRiMzg1MDY0NTcxODg2OTZjNGM5NjFiOGNhMTY5MTZjOGZmZmM5ZDqAAn1xAVUKdGVzdGNvb2tp
+ZXECVQZ3b3JrZWRxA3Mu
+','2011-07-21 11:44:15.115987');
+INSERT INTO "django_session" VALUES('1c66463dfb1c403940d0f6fbd7135ff5','OGRiMzg1MDY0NTcxODg2OTZjNGM5NjFiOGNhMTY5MTZjOGZmZmM5ZDqAAn1xAVUKdGVzdGNvb2tp
+ZXECVQZ3b3JrZWRxA3Mu
+','2011-07-21 11:44:15.175336');
+INSERT INTO "django_session" VALUES('7fabd56882d817ca2b4216e07de99a72','OGRiMzg1MDY0NTcxODg2OTZjNGM5NjFiOGNhMTY5MTZjOGZmZmM5ZDqAAn1xAVUKdGVzdGNvb2tp
+ZXECVQZ3b3JrZWRxA3Mu
+','2011-07-23 13:28:36.216539');
+INSERT INTO "django_session" VALUES('6f0b708777047a0f6d6120bfed5728a1','OGRiMzg1MDY0NTcxODg2OTZjNGM5NjFiOGNhMTY5MTZjOGZmZmM5ZDqAAn1xAVUKdGVzdGNvb2tp
+ZXECVQZ3b3JrZWRxA3Mu
+','2011-07-23 13:28:36.701244');
+INSERT INTO "django_session" VALUES('88db5879308905ff55a28950c553293e','OGRiMzg1MDY0NTcxODg2OTZjNGM5NjFiOGNhMTY5MTZjOGZmZmM5ZDqAAn1xAVUKdGVzdGNvb2tp
+ZXECVQZ3b3JrZWRxA3Mu
+','2011-07-23 13:28:37.153503');
+INSERT INTO "django_session" VALUES('bb57d951ba11d73fbf5e1aa95804184c','OGRiMzg1MDY0NTcxODg2OTZjNGM5NjFiOGNhMTY5MTZjOGZmZmM5ZDqAAn1xAVUKdGVzdGNvb2tp
+ZXECVQZ3b3JrZWRxA3Mu
+','2011-08-03 05:10:47.440226');
+INSERT INTO "django_session" VALUES('958c23fc208bacf3c9b9c79922be913f','YzgzODdhODA2MzdhMTg1YmZhNGIyYzQ2Zjk2MzE4M2JkN2M1MjJlZTqAAn1xAShVEl9hdXRoX3Vz
+ZXJfYmFja2VuZHECVSlkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZHED
+VQ1fYXV0aF91c2VyX2lkcQRLAXUu
+','2011-08-18 14:29:41.517574');
 CREATE TABLE "django_site" (
     "id" integer NOT NULL PRIMARY KEY,
     "domain" varchar(100) NOT NULL,
